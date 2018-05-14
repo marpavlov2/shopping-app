@@ -16,7 +16,11 @@ import { EditRecipePage } from '../edit-recipe/edit-recipe';
 })
 export class RecipesPage {
 
+  public mode = 'New';
+  selectOptions = ['Easy', 'Medium', 'Hard'];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.mode = this.navParams.get('mode');
   }
 
   ionViewDidLoad() {

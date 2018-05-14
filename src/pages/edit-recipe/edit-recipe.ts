@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the EditRecipePage page.
@@ -8,18 +8,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-edit-recipe',
   templateUrl: 'edit-recipe.html',
 })
 export class EditRecipePage {
 
+  public title: string = '';
+  public description: string = '';
+  public difficulty: string = '';
+
+  public mode = 'New';
+  selectOptions = ['Easy', 'Medium', 'Hard'];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.mode = this.navParams.get('mode');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad EditRecipePage');
+  onManageIngredients() {
+    console.log
   }
-
 }
